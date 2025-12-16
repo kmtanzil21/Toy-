@@ -1,0 +1,98 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?q=80&w=1000&auto=format&fit=crop",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Plush Teddy Bear",
+    "sellerName": "Cuddle Buddies",
+    "sellerEmail": "sales@cuddlebuddies.com",
+    "price": 24.99,
+    "rating": 4.9,
+    "availableQuantity": 120,
+    "description": "Soft, huggable teddy bear made from premium hypoallergenic materials. Perfect for bedtime snuggles.",
+    "pictureURL": "https://i.ibb.co.com/ycwf2vHv/teddy.jpg",
+    "subCategory": "Stuffed Animals"
+  },
+  {
+    "toyId": 4,
+    "toyName": "Wooden Train Set",
+    "sellerName": "Classic Woodworks",
+    "sellerEmail": "support@classicwoodworks.com",
+    "price": 55.00,
+    "rating": 4.8,
+    "availableQuantity": 30,
+    "description": "Handcrafted wooden train set with tracks, bridges, and magnetic train cars. Compatible with major brands.",
+    "pictureURL": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1000&auto=format&fit=crop",
+    "subCategory": "Wooden Toys"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Dollhouse Mansion",
+    "sellerName": "Dream Homes",
+    "sellerEmail": "sales@dreamhomes.com",
+    "price": 120.00,
+    "rating": 4.9,
+    "availableQuantity": 15,
+    "description": "Three-story wooden dollhouse with furniture included. Features a working elevator and balcony.",
+    "pictureURL": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=1000&auto=format&fit=crop",
+    "subCategory": "Dolls & Accessories"
+  },
+  {
+    "toyId": 9,
+    "toyName": "Kitchen Play Set",
+    "sellerName": "Little Chefs",
+    "sellerEmail": "chef@littlechefs.com",
+    "price": 89.99,
+    "rating": 4.8,
+    "availableQuantity": 25,
+    "description": "Interactive kitchen set with lights, sounds, and realistic cooking accessories.",
+    "pictureURL": "https://i.ibb.co.com/R4v52xCx/kitchen.jpg",
+    "subCategory": "Role Play"
+  },
+  {
+    "toyId": 13,
+    "toyName": "Dinosaur Figure Set",
+    "sellerName": "Jurassic Toys",
+    "sellerEmail": "roar@jurassictoys.com",
+    "price": 39.99,
+    "rating": 4.7,
+    "availableQuantity": 55,
+    "description": "Realistic dinosaur figures including T-Rex, Triceratops, and Stegosaurus.",
+    "pictureURL": "https://i.ibb.co.com/TDk9XmFq/dinosaur.jpg",
+    "subCategory": "Action Figures"
+  },
+  {
+    "toyId": 16,
+    "toyName": "Robot Building Kit",
+    "sellerName": "Tech Geniuses",
+    "sellerEmail": "support@techgeniuses.com",
+    "price": 60.00,
+    "rating": 4.9,
+    "availableQuantity": 35,
+    "description": "STEM robot kit that teaches coding and mechanics. Controlled via smartphone app.",
+    "pictureURL": "https://i.ibb.co.com/Y7ZHr1qt/robot.jpg",
+    "subCategory": "Educational"
+  },
+  {
+    "toyId": 23,
+    "toyName": "Magnetic Tiles",
+    "sellerName": "Magnet Magic",
+    "sellerEmail": "magic@magnetmagic.com",
+    "price": 59.99,
+    "rating": 4.9,
+    "availableQuantity": 80,
+    "description": "100-piece magnetic tile set for 3D building. Translucent colors create beautiful structures.",
+    "pictureURL": "https://images.unsplash.com/photo-1587588354456-ae376af71a25?q=80&w=1000&auto=format&fit=crop",
+    "subCategory": "Building Blocks"
+  }
+]
