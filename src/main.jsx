@@ -2,8 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from './page/Home.jsx';
 import TopProducts from './page/TopProducts.jsx';
 import AllProducts from './page/AllProducts.jsx';
@@ -12,10 +11,10 @@ import ToyDetails from './page/ToyDetails.jsx';
 import Login from './page/Login.jsx';
 import Register from './page/Register.jsx';
 import AuthProvider from './provider/AuthProvider.jsx';
-import PrivateRouter from './provider/PrivateRouter.jsx';
+import PrivateRouter from './provider/PrivateRouter.jsx'; // Ensure this matches your file name (PrivateRouter vs PrivateRoute)
 import ErrorPage from './page/ErrorPage.jsx';
-import { Toaster } from 'react-hot-toast';
-import MyProfile from './page/MyProfile.jsx'; // 1. IMPORTED NEW PAGE
+import { Toaster } from 'react-hot-toast'; 
+import MyProfile from './page/MyProfile.jsx'; // Import the new page
 
 const router = createBrowserRouter([
   {
@@ -34,12 +33,12 @@ const router = createBrowserRouter([
         path:'/allproducts',
         Component:AllProducts
       },
-      // 2. ADDED MY PROFILE ROUTE HERE
+      // ADDED: My Profile Route (Protected)
       {
         path: '/myprofile',
         element: (
           <PrivateRouter>
-            <MyProfile></MyProfile>
+            <MyProfile />
           </PrivateRouter>
         )
       }
@@ -47,9 +46,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/toy/:id',
-    element: <PrivateRouter>
-      <ToyDetails></ToyDetails>
-    </PrivateRouter>,
+    element: (
+        <PrivateRouter>
+            <ToyDetails />
+        </PrivateRouter>
+    ),
     loader: () => fetch('/allData.json').then(res => res.json())
   },
   {

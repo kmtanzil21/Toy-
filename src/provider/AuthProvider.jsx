@@ -7,7 +7,7 @@ import {
     signOut,
     GoogleAuthProvider,
     signInWithPopup,
-    updateProfile // 1. IMPORTED THIS
+    updateProfile 
 } from "firebase/auth";
 import app from '../firebase/firebase.config';
 
@@ -39,7 +39,6 @@ const AuthProvider = ({ children }) => {
         return signOut(auth);
     };
 
-    // 2. ADDED THIS FUNCTION
     const updateUserProfile = (updatedData) => {
         return updateProfile(auth.currentUser, updatedData);
     }
@@ -64,7 +63,7 @@ const AuthProvider = ({ children }) => {
         signIn,
         signInWithGoogle,
         logOut,
-        updateUserProfile, // 3. EXPORTED THIS
+        updateUserProfile, 
     };
 
     return (

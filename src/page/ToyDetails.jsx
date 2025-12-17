@@ -26,15 +26,15 @@ const ToyDetails = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulate successful submission
         setSuccessMessage(`Thank you, ${formData.name}! Your request to try ${toy.toyName} has been submitted.`);
-        setFormData({ name: '', email: '' }); // Reset form
+        setFormData({ name: '', email: '' }); 
     };
 
     return (
         <div className="container mx-auto px-4 py-10">
+              <title> Details | Toy Store</title>
+            <meta name="Details" content={`See the details of your desired amazing toys.`} />
             <div className="max-w-4xl mx-auto bg-base-100 shadow-2xl rounded-2xl overflow-hidden">
-                {/* Toy Image */}
                 <div className="p-8 bg-gray-100">
                     <img
                         src={toy.pictureURL}
@@ -43,7 +43,6 @@ const ToyDetails = () => {
                     />
                 </div>
 
-                {/* Main Content */}
                 <div className="p-8">
                     <h1 className="text-3xl font-bold text-primary mb-2">{toy.toyName}</h1>
                     <p className="text-2xl font-semibold text-secondary mb-4">${toy.price}</p>

@@ -6,7 +6,6 @@ const Product = ({ product }) => {
 
     return (
         <div className="card bg-base-100 w-full shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-gray-200">
-            {/* Thumbnail Section */}
             <figure className="px-4 pt-4 h-64 bg-gray-50 flex items-center justify-center">
                 <img
                     src={pictureURL}
@@ -16,7 +15,6 @@ const Product = ({ product }) => {
             </figure>
 
             <div className="card-body">
-                {/* Header: Name and Rating */}
                 <div className="flex justify-between items-start">
                     <h2 className="card-title text-lg font-bold truncate w-2/3" title={toyName}>
                         {toyName}
@@ -26,7 +24,6 @@ const Product = ({ product }) => {
                     </div>
                 </div>
 
-                {/* Quantity and Availability */}
                 <div className="mt-2 text-sm text-gray-500">
                     <span className="font-semibold">Availability:</span> 
                     <span className={availableQuantity > 0 ? "text-success ml-1" : "text-error ml-1"}>
@@ -34,13 +31,11 @@ const Product = ({ product }) => {
                     </span>
                 </div>
 
-                {/* Price and Action Section */}
                 <div className="card-actions justify-between items-center mt-4">
                     <div className="text-xl font-bold text-primary">
                         ${price}
                     </div>
                     
-                    {/* View More Button */}
                     <NavLink to={`/toy/${toyId}`}>
                         <button className="btn btn-primary btn-sm">
                             View More

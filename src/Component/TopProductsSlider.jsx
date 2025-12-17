@@ -1,17 +1,13 @@
 import React from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// Import required modules
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 const TopProductsSlider = () => {
-    // Your 8 Top Products Data
     const products = [
         {
             "toyId": 1,
@@ -84,10 +80,8 @@ const TopProductsSlider = () => {
             <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Top Toys</h2>
             
             <Swiper
-                // Install modules
                 modules={[Pagination, Navigation, Autoplay]}
                 spaceBetween={30}
-                // Default to 1 slide on very small screens
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}

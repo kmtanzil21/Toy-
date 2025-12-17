@@ -13,11 +13,7 @@ const MyProfile = () => {
         updateUserProfile({ displayName: name, photoURL: photo })
             .then(() => {
                 toast.success("Profile Updated Successfully!");
-                
-                // Manually update the user state so changes show immediately without refresh
-                setUser((prev) => {
-                    return { ...prev, displayName: name, photoURL: photo }
-                });
+                setUser((prev) => ({ ...prev, displayName: name, photoURL: photo }));
             })
             .catch((error) => {
                 console.error(error);
@@ -27,11 +23,12 @@ const MyProfile = () => {
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-base-200 py-10">
+            <title>My Profile| Toy Store</title>
+            <meta name="profile" content={`Edit your Profile.`} />
             <div className="card w-full max-w-lg bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="card-title justify-center text-2xl font-bold mb-4">My Profile</h2>
 
-                    {/* Display Current User Info */}
                     <div className="flex flex-col items-center gap-4 mb-6">
                         <div className="avatar">
                             <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -46,7 +43,6 @@ const MyProfile = () => {
 
                     <div className="divider">Edit Profile</div>
 
-                    {/* Edit Form */}
                     <form onSubmit={handleUpdateProfile} className="form-control gap-4">
                         <div>
                             <label className="label">
