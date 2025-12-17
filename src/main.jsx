@@ -14,7 +14,8 @@ import Register from './page/Register.jsx';
 import AuthProvider from './provider/AuthProvider.jsx';
 import PrivateRouter from './provider/PrivateRouter.jsx';
 import ErrorPage from './page/ErrorPage.jsx';
-import { Toaster } from 'react-hot-toast'; // 1. Import Toaster
+import { Toaster } from 'react-hot-toast';
+import MyProfile from './page/MyProfile.jsx'; // 1. IMPORTED NEW PAGE
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,15 @@ const router = createBrowserRouter([
         path:'/allproducts',
         Component:AllProducts
       },
-      
+      // 2. ADDED MY PROFILE ROUTE HERE
+      {
+        path: '/myprofile',
+        element: (
+          <PrivateRouter>
+            <MyProfile></MyProfile>
+          </PrivateRouter>
+        )
+      }
     ]
   },
   {
@@ -59,7 +68,7 @@ const router = createBrowserRouter([
    },
    {
      path: '/*',
-   Component:ErrorPage,
+     Component:ErrorPage,
    }
   
 ]);
@@ -68,8 +77,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
       <Toaster position="top-center" reverseOrder={false} />
-        <RouterProvider router={router} />,
+        <RouterProvider router={router} />
     </AuthProvider>
-
   </StrictMode>,
 )
