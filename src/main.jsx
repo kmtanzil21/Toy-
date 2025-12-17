@@ -12,6 +12,7 @@ import ToyDetails from './page/ToyDetails.jsx';
 import Login from './page/Login.jsx';
 import Register from './page/Register.jsx';
 import AuthProvider from './provider/AuthProvider.jsx';
+import PrivateRouter from './provider/PrivateRouter.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,9 @@ const router = createBrowserRouter([
   },
   {
     path: '/toy/:id',
-    element: <ToyDetails></ToyDetails>,
+    element: <PrivateRouter>
+      <ToyDetails></ToyDetails>
+    </PrivateRouter>,
     loader: () => fetch('/allData.json').then(res => res.json())
   },
   {
